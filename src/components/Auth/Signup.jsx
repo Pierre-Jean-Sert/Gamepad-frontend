@@ -10,11 +10,14 @@ import "./login-signup.css";
 
 //! Libraries import
 import axios from "axios";
+import Cookies from "js-cookie";
 
 //! Hooks import
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
-//! Components import
+//! Contexts import
+import { AuthContext } from "../../App";
 
 //* SIGNUP FUNCTION
 function Signup({ setComponentMgmt }) {
@@ -24,16 +27,67 @@ function Signup({ setComponentMgmt }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
+  const [badRequest, setBadRequest] = useState(null);
   const [file, setFile] = useState({});
   const [preview, setPreview] = useState(null);
+
+  // Def navigate
+  const navigate = useNavigate();
+
+  // Import setUserToken
+  const { setUserToken } = useContext(AuthContext);
+
+  // * handleSubmit sub-function
+  const handleSubmit = async (event) => {
+    //
+    // Prevent browser refresh
+    event.preventDefault();
+
+    //Check fields
+    if (!userName || !email || !password || !confirmPassword) {
+      return setBadRequest("One or more fields are empty");
+    }
+
+    //Check passwords
+    if (confirmPassword !== password) {
+      return setBadRequest("Passwords do not match");
+    }
+
+    //Axios request
+    try {
+      const response = await axios.post("http://localhost:3000/signup", {
+        username: userName,
+        email: email,
+        password: password,
+      });
+
+      //Token collected and stocked in cookies
+      const token = response.data.token;
+      Cookies.set("token", token, { expires: 7 });
+
+      //userToken state update
+      setUserToken(response.data.token);
+
+      //Return to home
+      navigate("/");
+
+      //
+    } catch (error) {
+      console.log(error.response.data.error);
+      if (error.response.data.message === "This email already has an account") {
+        setBadRequest("This email already has an account");
+      } else {
+        setBadRequest("Server error");
+      }
+    }
+  };
 
   // Return
   return (
     <div className="logSup-main-bloc">
       <h2>Signup</h2>
 
-      <form className="logSup-login-form">
+      <form className="logSup-login-form" onSubmit={handleSubmit}>
         <div className="logSup-login-form-first-bloc">
           <input
             className="logSup-large-input"
@@ -133,6 +187,9 @@ function Signup({ setComponentMgmt }) {
           >
             Already have an account ?
           </p>
+
+          {/* If bad request */}
+          {badRequest ? <p className="logSup-badrequest">{badRequest}</p> : ""}
         </div>
       </form>
     </div>

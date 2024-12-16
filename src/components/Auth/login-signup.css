@@ -118,3 +118,8 @@
   width: 100px;
   border-radius: 50%;
 }
+
+.logSup-badrequest {
+  color: #ff4655;
+  font-style: italic;
+}

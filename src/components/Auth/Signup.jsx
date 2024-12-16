@@ -17,7 +17,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 //! Contexts import
-import { AuthContext } from "../../App";
+import { AuthContext } from "../../Contexts/AuthContext";
 
 //* SIGNUP FUNCTION
 function Signup({ setComponentMgmt }) {
@@ -53,13 +53,24 @@ function Signup({ setComponentMgmt }) {
       return setBadRequest("Passwords do not match");
     }
 
+    // formData builder
+    const formData = new FormData();
+    formData.append("username", userName);
+    formData.append("email", email);
+    formData.append("password", password);
+    formData.append("file", file);
+
     //Axios request
     try {
-      const response = await axios.post("http://localhost:3000/signup", {
-        username: userName,
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/signup",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       //Token collected and stocked in cookies
       const token = response.data.token;
@@ -67,6 +78,10 @@ function Signup({ setComponentMgmt }) {
 
       //userToken state update
       setUserToken(response.data.token);
+
+      // Name collected and stocked in cookies
+      const name = response.data.account.username;
+      Cookies.set("name", name, { expires: 7 });
 
       //Return to home
       navigate("/");

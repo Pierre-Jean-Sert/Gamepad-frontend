@@ -56,3 +56,26 @@ header {
   background-color: white;
   color: #ff4655;
 }
+
+.header-isconnected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 180px;
+  height: 50px;
+  padding: 8px;
+
+  border-radius: 8px;
+  border: solid 2px white;
+}
+
+.header-isconnected p {
+  font-weight: 600;
+  text-align: center;
+}
+
+.header-isconnected span {
+  color: #ff4655;
+}

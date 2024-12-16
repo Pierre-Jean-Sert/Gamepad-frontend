@@ -11,7 +11,7 @@ import "./App.css";
 
 //! Libraries import
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { createContext, useState } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 
 //! Pages import
@@ -24,7 +24,7 @@ import Header from "./components/General/Header";
 import Footer from "./components/General/Footer";
 
 //! Contexts
-export const AuthContext = createContext();
+import { AuthContext } from "./Contexts/AuthContext";
 
 //* APP FUNCTION
 function App() {

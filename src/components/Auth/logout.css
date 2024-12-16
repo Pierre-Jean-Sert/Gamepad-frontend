@@ -1,0 +1,12 @@
+/*
+/* LOGOUT CSS */
+
+.logout-button {
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: #ff4655;
+}

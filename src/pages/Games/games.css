@@ -1,0 +1,105 @@
+/*
+/* GAMES CSS */
+
+/* First bloc */
+
+.games-first-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  padding-top: 40px;
+}
+
+.games-header {
+  display: flex;
+  align-items: center;
+
+  width: 600px;
+}
+
+.games-logo {
+  height: 160px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.games-search-bar {
+  display: flex;
+  align-items: center;
+
+  width: 450px;
+  height: 50px;
+
+  padding: 5px;
+
+  background-color: white;
+  color: black;
+
+  border-radius: 8px;
+}
+
+.games-search-bar input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+
+  background-color: transparent;
+
+  font-family: "Titillium Web", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.games-search-bar input:focus {
+  outline: none;
+}
+
+.games-search-bar i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.games-search-comment {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.games-is-searching {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.games-search-result {
+  font-size: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Second bloc */
+
+.games-second-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-top: 60px;
+
+  min-height: 100vh;
+}
+
+.games-second-bloc h2 {
+  margin-left: 20px;
+}

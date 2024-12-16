@@ -1,0 +1,72 @@
+/*
+/* GAME CSS */
+
+/* Game description bloc */
+
+.game-description-bloc {
+  padding-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  position: relative;
+}
+
+.game-red-border {
+  width: 200px;
+  border: solid 3px #ff4655;
+
+  position: absolute;
+  top: 68px;
+  z-index: 1;
+}
+
+.game-name {
+  font-size: 34px;
+  font-weight: 400;
+  z-index: 2;
+}
+
+/* Similar game bloc */
+
+.sg-general {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  overflow: scroll;
+  gap: 20px;
+}
+
+.sg-general::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Game statistics bloc */
+
+.game-statistics-bloc {
+  padding-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.game-statistics-bloc h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+
+  z-index: 2;
+}
+
+.game-section-red {
+  border: solid 3px #ff4655;
+  width: 200px;
+}

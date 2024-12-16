@@ -1,0 +1,120 @@
+/*
+/* LOGIN & SIGNUP CSS */
+
+/* LOGIN CSS */
+
+.logSup-main-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logSup-main-bloc h2 {
+  font-size: 38px;
+}
+
+.logSup-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logSup-login-form-first-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.logSup-login-form-connection-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logSup-large-button {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: #ff4655;
+  border-radius: 5px;
+  border: none;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logSup-large-input {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+
+  font-size: 16px;
+
+  padding: 5px;
+}
+
+.logSup-large-input:focus {
+  outline: none;
+}
+
+.logSup-link {
+  cursor: pointer;
+}
+
+.logSup-link:hover {
+  color: #ff4655;
+}
+
+/* SIGNUP CSS */
+
+.logSup-signup {
+  display: flex;
+  gap: 10px;
+}
+
+.logSup-signup input {
+  flex: 1;
+  width: 50px;
+}
+
+.logSup-signup p {
+  flex: 1;
+}
+
+.logSup-add-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logSup-add-image > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+
+  font-size: 16px;
+
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+.logSup-add-image > input {
+  display: none;
+}
+
+.logSup-preview-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}

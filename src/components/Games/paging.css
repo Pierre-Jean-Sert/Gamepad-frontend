@@ -1,0 +1,23 @@
+/* PAGING CSS */
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 18px;
+
+  padding-bottom: 20px;
+}
+
+.paging i {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.paging-page {
+  background-color: #ff4655;
+  padding: 4px;
+  border-radius: 4px;
+}

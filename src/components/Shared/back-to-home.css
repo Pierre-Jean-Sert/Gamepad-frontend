@@ -1,0 +1,17 @@
+/*
+/* Back To Home CSS */
+
+.bth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding-top: 40px;
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.bth i {
+  color: #ff4655;
+}

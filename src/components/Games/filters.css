@@ -1,0 +1,66 @@
+/*
+/* FILTERS CSS */
+
+.filters-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Titillium Web", serif;
+  font-size: 16px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.filters-section select {
+  background-color: transparent;
+  border: none;
+  color: white;
+
+  width: 120px;
+
+  font-family: "Titillium Web", serif;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.filters-section select:focus {
+  background-color: #404040;
+}
+
+.filters-section button {
+  background-color: #ff4655;
+  border: none;
+  color: white;
+
+  width: 120px;
+  border-radius: 8px;
+  padding: 5px;
+
+  font-family: "Titillium Web", serif;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.filters-section button:hover {
+  background-color: white;
+  color: #ff4655;
+}
+
+.filters-bloc {
+  display: flex;
+  gap: 20px;
+}
+
+.filters-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  background-color: #404040;
+  border-radius: 8px;
+  padding: 5px;
+}

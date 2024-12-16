@@ -1,0 +1,94 @@
+/*
+/* AUTH CSS */
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.auth-bloc {
+  display: flex;
+  align-items: center;
+}
+
+/* Left bloc */
+
+.auth-left-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  flex: 1;
+
+  padding: 30px;
+  min-height: 550px;
+
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  border-right: solid 4px #ff4655;
+
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.auth-left-bloc h2 {
+  font-size: 38px;
+}
+
+.auth-section-red {
+  margin-right: 10px;
+  border-bottom: solid 3px #ff4655;
+  width: 200px;
+}
+
+.auth-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.auth-paragraph div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Right bloc */
+
+.auth-right-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  padding: 30px;
+  min-height: 550px;
+
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

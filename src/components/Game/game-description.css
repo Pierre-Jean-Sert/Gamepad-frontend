@@ -1,0 +1,91 @@
+/*
+/* GAME DESCRIPTION CSS */
+
+.gd-bloc {
+  display: flex;
+  gap: 40px;
+
+  margin-bottom: 40px;
+}
+
+.gd-bloc img {
+  height: 450px;
+  width: 550px;
+  object-fit: cover;
+  object-position: top;
+
+  border-radius: 8px;
+}
+
+.gd-right-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* LINK */
+
+.gd-link {
+  display: flex;
+  gap: 20px;
+}
+
+.gd-link > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  border: solid 2px white;
+  padding: 10px;
+  border-radius: 8px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.gd-link > div:hover {
+  background-color: #ff4655;
+}
+
+.gd-link > div > div {
+  display: flex;
+  gap: 8px;
+}
+
+.gd-green {
+  color: #5eaa53;
+}
+
+/* Game details */
+
+.gd-details {
+  display: flex;
+  gap: 10px;
+}
+
+.gd-details-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+.gd-details-title {
+  color: #676767;
+}
+
+.gd-about {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.gd-about > div {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  text-align: justify;
+}

@@ -84,7 +84,7 @@ function MyCollection() {
       //
 
       // Rawg API Key and Url
-      const apiKey = "afbe33d884cf4ff6a866f2f22446a121";
+      const apiKey = import.meta.env.VITE_RAWG_API_KEY;
       const urls = [];
 
       for (let i = 0; i < bookmarks.length; i++) {

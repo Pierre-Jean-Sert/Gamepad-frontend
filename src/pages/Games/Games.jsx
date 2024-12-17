@@ -24,8 +24,6 @@ import Paging from "../../components/Games/Paging";
 import GameTab from "../../components/Shared/GameTab";
 import Loader from "../../components/General/Loader";
 
-//! Contexts
-
 //* GAMES FUNCTION
 function Games() {
   //
@@ -39,7 +37,7 @@ function Games() {
   const [isSearching, setIsSearching] = useState(false);
 
   // Rawg API Key and Url
-  const apiKey = "afbe33d884cf4ff6a866f2f22446a121";
+  const apiKey = import.meta.env.VITE_RAWG_API_KEY;
   const defaultUrl = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-rating`;
   const [url, setUrl] = useState(defaultUrl);
 

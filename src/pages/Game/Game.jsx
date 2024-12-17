@@ -35,7 +35,7 @@ function Game() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Rawg API Key and Url
-  const apiKey = "afbe33d884cf4ff6a866f2f22446a121";
+  const apiKey = import.meta.env.VITE_RAWG_API_KEY;
   const gameUrl = `https://api.rawg.io/api/games/${gameId}?key=${apiKey}`;
   const similarGameUrl = `https://api.rawg.io/api/games/${gameId}/game-series?key=${apiKey}`;
 

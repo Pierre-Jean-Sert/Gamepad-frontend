@@ -18,6 +18,7 @@ import Cookies from "js-cookie";
 import Games from "./pages/Games/Games";
 import Game from "./pages/Game/Game";
 import Auth from "./pages/Auth/Auth";
+import MyCollection from "./pages/User/MyCollection";
 
 //! Components import
 import Header from "./components/General/Header";
@@ -50,6 +51,12 @@ function App() {
 
             {/* AUTH */}
             <Route path="/auth" element={<Auth></Auth>}></Route>
+
+            {/* MY COLLECTION */}
+            <Route
+              path="/my-collection"
+              element={<MyCollection></MyCollection>}
+            ></Route>
           </Routes>
 
           {/* FOOTER */}

@@ -10,7 +10,7 @@
 import "./game-description.css";
 
 //! Components import
-import AddBookmark from "./AddBookmark";
+import AddBookmark from "../Collection/AddBookmark";
 
 //! Images
 import noImage from "../../assets/image-not-found.webp";

@@ -7,7 +7,7 @@
 */
 
 //! Style import
-import "./game-description.css";
+import "../Game/game-description.css";
 
 //! Libraries import
 import axios from "axios";
@@ -26,6 +26,9 @@ function AddBookmark({ gameId }) {
   const [isAdded, setIsAdded] = useState(false);
   const [badRequest, setBadRequest] = useState("");
 
+  // Import userToken
+  const { userToken } = useContext(AuthContext);
+
   // States with useEffect to render app when gameId changes
   useEffect(() => {
     // Réinitialise les états si gameId change
@@ -33,18 +36,26 @@ function AddBookmark({ gameId }) {
     setBadRequest("");
   }, [gameId]);
 
-  // Import userToken
-  const { userToken } = useContext(AuthContext);
-
   // * handleSubmit sub-function
   const addBookmarkInDb = async () => {
     //
+    if (!userToken) {
+      return setBadRequest("Token required");
+    }
+
     //Axios request
     try {
-      await axios.post("http://localhost:3000/bookmark/add", {
-        token: userToken,
-        gameId: gameId,
-      });
+      await axios.post(
+        "http://localhost:3000/bookmark/add",
+        {
+          gameId: gameId,
+        },
+        {
+          headers: {
+            authorization: `Bearer ${userToken}`,
+          },
+        }
+      );
 
       // Set isAdded true
       setIsAdded(true);
@@ -56,8 +67,6 @@ function AddBookmark({ gameId }) {
         error.response.data.message === "Bookmark already in base for this user"
       ) {
         setBadRequest("Bookmark already in base for this user");
-      } else if (error.response.data.message === "Token required") {
-        setBadRequest("Token required");
       } else {
         setBadRequest("Server error");
       }
@@ -97,7 +106,7 @@ function AddBookmark({ gameId }) {
 
       {badRequest === "Bookmark already in base for this user" ? (
         <>
-          <p className="gd-already-in-db ">Game is already in your</p>
+          <p className="gd-already-in-db ">Game is already in</p>
           <div className="gd-already-in-db ">
             <p>Collection</p>
             <i className="fa-solid fa-triangle-exclamation"></i>
@@ -111,7 +120,7 @@ function AddBookmark({ gameId }) {
         <>
           <Link className="gd-go-to-login " to="/auth">
             <p className="gd-already-in-db">
-              Your need to be logged to use bookmark
+              Your need to be logged to use collection
             </p>
             <div className="gd-already-in-db ">
               <p>Click here to login</p>

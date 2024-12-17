@@ -56,7 +56,7 @@ function Header() {
       </Link>
 
       <div className="header-right-bloc">
-        <Link to="/mycollection">
+        <Link to="/my-collection">
           <p>My collection</p>
         </Link>
 
@@ -66,7 +66,7 @@ function Header() {
           <div className="header-isconnected">
             <p>
               <Link to="/myprofile">
-                Bienvenue <span>{name}</span>
+                Welcome <span>{name}</span>
               </Link>
             </p>
 

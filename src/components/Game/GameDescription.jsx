@@ -9,6 +9,9 @@
 //! Style import
 import "./game-description.css";
 
+//! Components import
+import AddBookmark from "./AddBookmark";
+
 //! Images
 import noImage from "../../assets/image-not-found.webp";
 
@@ -43,14 +46,8 @@ function GameDescription({ data }) {
         <div className="gd-right-bloc">
           {/* Save to collection and add a review */}
           <div className="gd-link">
-            <div>
-              <p>Saved to</p>
-              <div>
-                <p className="gd-green">Collection</p>
-                <i className="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-
+            {/* AddBookmark component */}
+            <AddBookmark gameId={data.id}></AddBookmark>
             <div>
               <p>Add a </p>
               <div>

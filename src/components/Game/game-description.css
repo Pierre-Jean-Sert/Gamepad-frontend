@@ -89,3 +89,24 @@
   -webkit-line-clamp: 10;
   text-align: justify;
 }
+
+/* Addbookmark CSS */
+
+.gd-added {
+  color: #ff4655;
+}
+
+.gd-already-in-db {
+  color: #ff7f00;
+}
+
+.gd-go-to-login {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.gd-go-to-login > div {
+  display: flex;
+  gap: 10px;
+}

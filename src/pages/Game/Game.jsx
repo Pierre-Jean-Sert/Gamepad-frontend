@@ -86,7 +86,7 @@ function Game() {
             <GameDescription data={gameData}></GameDescription>
           </section>
 
-          {/* Similar games */}
+          {/* Similar games component */}
           {similarGameData.results.length !== 0 && (
             <section>
               <div className="game-statistics-bloc">

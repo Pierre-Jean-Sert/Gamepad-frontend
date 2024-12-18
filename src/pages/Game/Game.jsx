@@ -22,6 +22,7 @@ import Loader from "../../components/General/Loader";
 import GameDescription from "../../components/Game/GameDescription";
 import GameStatistics from "../../components/Game/GameStatistics";
 import GameTab from "../../components/Shared/GameTab";
+import GameReviews from "../../components/Game/GameReviews";
 
 //* GAME FUNCTION
 function Game() {
@@ -107,6 +108,15 @@ function Game() {
               <p className="game-section-red"></p>
             </div>
             <GameStatistics data={gameData}></GameStatistics>
+          </section>
+
+          {/* Reviews*/}
+          <section>
+            <div className="game-statistics-bloc">
+              <h3>What are the reviews of the players ?</h3>
+              <p className="game-section-red"></p>
+              <GameReviews gameId={gameId}></GameReviews>
+            </div>
           </section>
         </main>
       )}

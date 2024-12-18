@@ -1,0 +1,91 @@
+/*
+/* GAME REVIEWS CSS */
+
+.review-general {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  width: 700px;
+}
+
+.review-first-bloc {
+  padding: 10px;
+}
+
+.review-first-bloc h4 {
+  font-size: 24px;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: #2a2b2e;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.review-card h5 {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.review-card > p {
+  color: #bfbfc0;
+  text-align: justify;
+}
+
+.review-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-card-footer-user {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-card-footer-user > p:nth-child(1) {
+  color: #bfbfc0;
+  font-size: 14px;
+}
+
+.review-card-footer-user > p:nth-child(2) {
+  font-size: 18px;
+}
+
+.review-card-footer-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grey {
+  color: #bfbfc0;
+  font-size: 18px;
+}
+
+.green {
+  color: #74d963;
+  font-size: 18px;
+}
+
+.red {
+  color: #ff4655;
+  font-size: 18px;
+}

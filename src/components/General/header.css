@@ -79,3 +79,13 @@ header {
 .header-isconnected span {
   color: #ff4655;
 }
+
+/* FOOTER CSS */
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

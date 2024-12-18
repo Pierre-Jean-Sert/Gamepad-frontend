@@ -37,6 +37,7 @@ function MyCollection() {
   const [bookmarks, setBookmarks] = useState([]);
   const [gamesData, setGamesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   //useEffect to check if user is logged
   useEffect(() => {
@@ -75,7 +76,7 @@ function MyCollection() {
 
     //fetchData calling
     fetchBookmarksData();
-  }, [userToken]);
+  }, [userToken, isDeleting]);
 
   //useEffect to recover data from Rawg API
   useEffect(() => {
@@ -112,7 +113,7 @@ function MyCollection() {
 
     //fetchData calling
     fetchGamesData();
-  }, [bookmarks]);
+  }, [bookmarks, isDeleting]);
 
   // Return
   return (
@@ -120,7 +121,7 @@ function MyCollection() {
       {isLoading ? (
         <Loader></Loader>
       ) : (
-        <main className="container">
+        <main className="container mc-height">
           {/* Return to home */}
           <BackToHome></BackToHome>
 
@@ -132,7 +133,13 @@ function MyCollection() {
           </section>
 
           <section className="mc-games-list">
-            <GameTab dataToMap={gamesData}></GameTab>
+            <GameTab
+              dataToMap={gamesData}
+              deleteOption={true}
+              isDeleting={isDeleting}
+              setIsDeleting={setIsDeleting}
+              setIsLoading={setIsLoading}
+            ></GameTab>
           </section>
         </main>
       )}

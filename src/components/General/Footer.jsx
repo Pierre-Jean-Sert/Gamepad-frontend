@@ -7,19 +7,16 @@
 */
 
 //! Style import
-
-//! Libraries import
-
-//! Pages import
-
-//! Components import
-
-//! Contexts
+import "./header.css";
 
 //* FOOTER FUNCTION
 function Footer() {
   // Return
-  return null;
+  return (
+    <footer className="container">
+      <p>Made by PJS with RAWG API</p>
+    </footer>
+  );
 }
 
 export default Footer;

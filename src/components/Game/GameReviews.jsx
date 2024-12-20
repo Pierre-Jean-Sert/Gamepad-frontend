@@ -22,10 +22,6 @@ function GameReviews({ gameId }) {
   //
   // States
   const [reviews, setRewiews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  console.log(gameId);
-  console.log(reviews);
 
   //useEffect to recover data from bakcend
   useEffect(() => {
@@ -63,7 +59,7 @@ function GameReviews({ gameId }) {
 
       {/* Reviews */}
       <div className="review-list">
-        {reviews.map((review, index) => {
+        {reviews.map((review) => {
           //
           return (
             <div className="review-card" key="index">
@@ -82,23 +78,32 @@ function GameReviews({ gameId }) {
 
                 {/* Counter */}
                 {review.counter === 0 && (
-                  <div className="review-card-footer-counter grey">
+                  <div
+                    key={review.counter}
+                    className="review-card-footer-counter grey"
+                  >
                     <i className="fa-solid fa-thumbs-up"></i>
-                    <p key={review.counter}>{review.counter}</p>
+                    <p>{review.counter}</p>
                   </div>
                 )}
 
                 {review.counter > 0 && (
-                  <div className="review-card-footer-counter green">
+                  <div
+                    key={review.counter}
+                    className="review-card-footer-counter green"
+                  >
                     <i className="fa-solid fa-thumbs-up"></i>
-                    <p key={review.counter}>+{review.counter}</p>
+                    <p>+{review.counter}</p>
                   </div>
                 )}
 
                 {review.counter < 0 && (
-                  <div className="review-card-footer-counter red">
+                  <div
+                    key={review.counter}
+                    className="review-card-footer-counter red"
+                  >
                     <i className="fa-solid fa-thumbs-down"></i>
-                    <p key={review.counter}> {review.counter}</p>
+                    <p>{review.counter}</p>
                   </div>
                 )}
               </article>

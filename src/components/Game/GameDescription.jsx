@@ -11,6 +11,7 @@ import "./game-description.css";
 
 //! Components import
 import AddBookmark from "../Collection/AddBookmark";
+import AddReview from "../Collection/AddReview";
 
 //! Images
 import noImage from "../../assets/image-not-found.webp";
@@ -48,13 +49,8 @@ function GameDescription({ data }) {
           <div className="gd-link">
             {/* AddBookmark component */}
             <AddBookmark gameId={data.id}></AddBookmark>
-            <div>
-              <p>Add a </p>
-              <div>
-                <p>Review</p>
-                <i className="fa-regular fa-comment"></i>
-              </div>
-            </div>
+            {/* AddReview component */}
+            <AddReview gameId={data.id}></AddReview>
           </div>
 
           {/* Game details */}

@@ -1,0 +1,97 @@
+/*
+/* MODAL CSS */
+
+.App {
+  position: relative;
+}
+.home {
+  padding: 20px 50px;
+  font-size: 20px;
+}
+.modal-root {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  background-color: #424448;
+  width: 700px;
+  height: 400px;
+  padding: 10px 50px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal-close-button {
+  width: 30px;
+  height: 30px;
+
+  background-color: #ff4655;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------- */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form > div input,
+textarea {
+  border-radius: 6px;
+  border: none;
+  padding: 5px;
+}
+
+.modal-form > div input {
+  height: 40px;
+}
+
+.modal-button-publish {
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal-button-publish button {
+  width: 100px;
+  height: 40px;
+
+  border-radius: 8px;
+  border: none;
+  background-color: #ff4655;
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.modal-button-publish button:hover {
+  background-color: white;
+  color: #ff4655;
+}

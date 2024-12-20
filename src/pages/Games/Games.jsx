@@ -38,7 +38,7 @@ function Games() {
 
   // Rawg API Key and Url
   const apiKey = import.meta.env.VITE_RAWG_API_KEY;
-  const defaultUrl = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-rating`;
+  const defaultUrl = `https://api.rawg.io/api/games?key=${apiKey}`;
   const [url, setUrl] = useState(defaultUrl);
 
   //useEffect to recover data from Rawg API
